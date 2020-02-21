@@ -5,7 +5,7 @@ let headerBox = document.getElementById("header"),
 !function(){
     let data = null;
     let xhr = new XMLHttpRequest();
-    xhr.open("get","../json/product.txt",false);
+    xhr.open("get","json/product.txt",false);
     xhr.onreadystatechange = ()=>{
         if(xhr.readyState === 4 && xhr.status === 200){
             data = xhr.responseText;
