@@ -52,9 +52,12 @@ let productRender = (function(){
                     return (aInn - bInn)*this.flag;
                 });
                 //按照最新顺序依次添加到容器中
+                let frg = document.createDocumentFragment();//利用文档碎片减少DOM回流
                 productList.forEach((curLi,index)=>{
-                    list.appendChild(curLi);
+                    frg.appendChild(curLi);
                 })
+                list.appendChild(frg);
+                frg = null;
             }
         })
     }
